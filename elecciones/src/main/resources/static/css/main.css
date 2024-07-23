@@ -1,0 +1,388 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos del header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #003770;
+    color: #ffffff;
+    padding: 0px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.onpe-logo {
+    height: 50px;
+    max-width: 100px; /* Ajusta el tamaño máximo de la imagen del logo */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logout-button {
+    padding: 10px 20px;
+    background-color: #DF0A14;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #c60a11;
+}
+
+/* Estilos del contenedor principal */
+.container {
+    display: flex;
+    flex-direction: row; /* Cambia a dirección de fila por defecto */
+    padding: 5%;
+    padding-left: 150px;
+    padding-top: 2%;
+    padding-right: 150px;
+    height: calc(100vh - 80px); /* Ajusta la altura para ocupar el espacio disponible sin el header */
+    box-sizing: border-box;
+    gap: 20px; /* Espacio entre los elementos en el contenedor */
+}
+
+/* Estilos para la lista de candidatos */
+.candidates-list {
+    flex: 1 1 300px; /* Flexibilidad en el tamaño y permite ajustar al ancho disponible */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: auto; /* Permite desplazamiento vertical si hay mucho contenido */
+    box-sizing: border-box;
+}
+
+/* Estilo para el título de la lista de candidatos */
+.candidates-list h2 {
+    margin-bottom: 20px; /* Espacio entre el título y la lista */
+    color: #003770; /* Color azul según la paleta */
+    font-size: 24px; /* Tamaño del texto */
+}
+
+/* Estilos de la información del candidato */
+.candidate-info {
+    flex: 1 1 300px; /* Flexibilidad en el tamaño y permite ajustar al ancho disponible */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-sizing: border-box;
+    margin: 20px; /* Ajusta el margen */
+    overflow-y: auto; /* Añadir slider si es necesario */
+    max-height: calc(100vh - 120px); /* Ajusta la altura máxima para que quepa en la pantalla */
+}
+
+/* Contenedor para fotos del candidato y logo del partido */
+.photo-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    justify-content: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Estilos para la foto del candidato */
+.candidate-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Estilos para el logo del partido */
+.party-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Contenedor para la información del candidato */
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Ajusta el espacio entre elementos */
+    text-align: center;
+    width: 100%;
+}
+
+/* Estilo para elementos individuales de información */
+.info-item {
+    width: 100%;
+}
+
+/* Estilo para títulos */
+#candidate-name {
+    font-size: 24px; /* Tamaño del texto */
+    margin: 0;
+    color: #003770; /* Color del título */
+}
+
+/* Estilo para el subtítulo del partido */
+#candidate-party {
+    font-size: 20px; /* Tamaño del texto */
+    margin: 0;
+    color: #333333; /* Color del subtítulo */
+}
+
+/* Estilo para párrafos */
+#candidate-speech {
+    font-size: 16px; /* Tamaño del texto */
+    margin: 0;
+    color: #666666; /* Color del párrafo */
+}
+
+/* Estilos para el botón de propuestas */
+#proposals-button {
+    padding: 10px 20px;
+    background-color: #003770;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+#proposals-button:hover {
+    background-color: #002450;
+}
+
+/* Estilos para el botón de votar */
+.vote-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.vote-button:hover {
+    background-color: #218838;
+}
+
+/* Estilos para las tarjetas de candidatos */
+.candidate-card {
+    background-color: #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.candidate-card img.party-symbol {
+    width: 50px;
+    height: 50px;
+}
+
+.candidate-card img.candidate-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.candidate-card h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.candidate-card p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px; /* Añade padding para mantener el contenido dentro del modal */
+}
+
+/* Estilos del contenido del modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 20px auto; /* Añade margen automático para centrar y margen en los bordes */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 90vw; /* Ajusta el ancho máximo al 90% del viewport width */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+}
+
+/* Estilos del header del modal */
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre la foto del candidato y el logo del partido */
+    margin-bottom: 20px; /* Espacio entre el header y las propuestas */
+}
+
+.modal-header img.candidate-photo {
+    width: 20vw; /* Ajusta el tamaño de la foto del candidato al 20% del ancho del viewport */
+    height: auto;
+    max-width: 120px; /* Tamaño máximo de la foto del candidato */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.modal-header img.party-logo {
+    width: 15vw; /* Ajusta el tamaño del logo del partido al 15% del ancho del viewport */
+    height: auto;
+    max-width: 80px; /* Tamaño máximo del logo del partido */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.modal-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilos del modal de éxito de voto */
+#vote-success-modal {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Oculta por defecto */
+    justify-content: center;
+    align-items: center;
+}
+
+#vote-success-modal .modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+#vote-success-modal h2 {
+    margin-bottom: 20px;
+}
+
+#close-vote-success {
+    padding: 10px 20px;
+    background-color: #003770;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#close-vote-success:hover {
+    background-color: #002450;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a dirección de columna en pantallas angostas */
+        padding: 10px; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .candidate-info {
+        margin: 10px; /* Reduce aún más el margen en pantallas más pequeñas */
+        padding: 10px;
+    }
+
+    .candidate-card {
+        flex-direction: column; /* Cambia la dirección a columna para las tarjetas de candidatos */
+        align-items: flex-start;
+    }
+
+    .candidate-card img.party-symbol,
+    .candidate-card img.candidate-photo {
+        width: 100%; /* Ajusta el ancho de las imágenes al 100% en pantallas pequeñas */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+    
+    /* Ajuste específico para imágenes de la lista de candidatos */
+    .candidate-card img.party-symbol {
+        width: 40px; /* Ajusta el tamaño de la imagen del logo del partido */
+        height: 40px;
+    }
+
+    .candidate-card img.candidate-photo {
+        width: 50px; /* Ajusta el tamaño de la imagen del candidato */
+        height: 50px;
+    }
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #003770; /* Fondo azul según la paleta */
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    padding: 10px 0; /* Padding arriba y abajo */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra en la parte superior */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}

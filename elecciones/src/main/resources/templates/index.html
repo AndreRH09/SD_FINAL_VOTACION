@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Bienvenida</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="welcome-container" id="welcome-container">
+        <img src="img/onpeLogo.png" alt="Logo ONPE" class="logo" id="onpe-logo">
+        <h1>Bienvenido a las Elecciones Nacionales</h1>
+        <p>Participa en el proceso democrático votando por los candidatos de tu preferencia. Tu voto es importante para el futuro de nuestra nación.</p>
+        <button class="vote-button" id="vote-button">Votar</button>
+        <div class="login-container" id="login-container">
+            <h1>Inicio de Sesión</h1>
+            <form>
+                <label for="username">Nombre de Usuario</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" name="dni" required>
+                
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

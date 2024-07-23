@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="img/onpeLogo.png" alt="Logo ONPE" class="onpe-logo">
+        <h1>Elecciones</h1>
+        <div class="user-info">
+            <span id="username-display"></span>
+            <button id="logout-button" class="logout-button">Cerrar Sesión</button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="candidates-list">
+            <h2>Candidatos</h2>
+            <div id="candidates-container"></div>
+        </div>
+        <div class="candidate-info" id="candidate-info">
+            <div class="photo-container">
+                <img id="candidate-photo" src="" alt="Foto del Candidato" class="candidate-photo">
+                <img id="party-logo" src="" alt="Logo del Partido" class="party-logo">
+            </div>
+            <div class="info">
+                <div class="info-item">
+                    <h2 id="candidate-name">Nombre del Candidato</h2>
+                </div>
+                <div class="info-item">
+                    <h3 id="candidate-party">Partido del Candidato</h3>
+                </div>
+                <div class="info-item">
+                    <p id="candidate-speech">Discurso del Candidato</p>
+                </div>
+                <div class="info-item">
+                    <button id="proposals-button">Ver Propuestas</button>
+                </div>
+                <div class="info-item">
+                    <button id="vote-button" class="vote-button">Votar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="proposals-modal" class="modal">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <h2>Propuestas</h2>
+            <div class="modal-header">
+                <img id="modal-candidate-photo" src="" alt="Foto del Candidato" class="candidate-photo">
+                <img id="modal-party-logo" src="" alt="Logo del Partido" class="party-logo">
+            </div>
+            <div id="modal-proposals"></div>
+        </div>
+    </div>
+
+    <div id="vote-success-modal" class="modal">
+        <div class="modal-content">
+            <h2>¡Voto enviado exitosamente!</h2>
+            <button id="close-vote-success">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="js/candidates.js"></script>
+    <script src="js/main.js"></script>
+</body>
+<!-- Footer -->
+<footer class="footer">
+    <p>Grupo 2, Sistemas Distribuidos</p>
+</footer>
+
+</html>

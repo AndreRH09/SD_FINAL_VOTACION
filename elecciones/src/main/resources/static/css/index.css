@@ -1,0 +1,151 @@
+/* Estilo general del cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Evita el desbordamiento */
+}
+
+/* Fondo de la página */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Efecto de fade */
+    z-index: -2;
+}
+
+/* Overlay para desvanecer la imagen de fondo en azul */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 55, 112, 0.7); /* Azul desvanecido más fuerte */
+    z-index: -1;
+}
+
+/* Estilo del contenedor de bienvenida */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco */
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    text-align: center;
+    position: relative; /* Añadido para el centrado */
+    z-index: 0;
+}
+
+/* Estilo del logo */
+.welcome-container .logo {
+    width: 200px; /* Tamaño más grande del logo */
+    margin-bottom: 30px; /* Espacio entre el logo y el título */
+}
+
+/* Estilo del texto de bienvenida */
+.welcome-container h1 {
+    color: #003770;
+    margin-bottom: 20px;
+    font-size: 24px; /* Tamaño de fuente ajustado */
+}
+
+.welcome-container p {
+    font-size: 18px;
+    margin: 0 30px 30px 30px; /* Margen ajustado para el texto */
+}
+
+/* Estilo del botón de votar */
+.vote-button {
+    background-color: #DF0A14;
+    color: #ffffff;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.vote-button:hover {
+    background-color: #c60a11;
+}
+
+/* Estilo del formulario de inicio de sesión */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco */
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Ancho máximo del contenedor */
+    text-align: left; /* Alinea el texto a la izquierda */
+    position: fixed; /* Centra en toda la pantalla */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra vertical y horizontalmente */
+    z-index: 1; /* Asegura que esté por encima del fondo */
+    display: none;
+}
+
+.login-container h1 {
+    color: #003770;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center; /* Centra el título */
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.login-container label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el campo de entrada */
+    display: block; /* Asegura que el texto esté en una nueva línea */
+}
+
+.login-container input {
+    padding: 10px;
+    border: 1px solid #003770;
+    border-radius: 5px;
+    width: 100%; /* Asegura que el campo de entrada ocupe el ancho completo del contenedor */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+}
+
+.login-container button {
+    padding: 10px;
+    background-color: #DF0A14;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Asegura que el botón tenga el mismo ancho que el campo de entrada */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho total */
+}
+
+.login-container button:hover {
+    background-color: #c60a11;
+}
